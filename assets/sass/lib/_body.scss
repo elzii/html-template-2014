@@ -1,0 +1,66 @@
+// _body.scss
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  font-family: $default, "proximanova", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #282a2c;
+  max-height:100%;
+  background-color:#fff;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box;
+}
+* {
+  backface-visibility: visible;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+a {
+  text-decoration:none;
+  color:inherit;
+  font-weight:normal;
+  /* TRANSITION */
+  @include transition(
+    color 150ms,
+    background 150ms
+  );
+}
+p {
+  a { color:$colorSecondaryDarker; }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height:1.55;
+  margin:1rem 0;
+}
+
+h1 {font-size:em(55px);font-weight:300; }
+h2 {font-size:em(46px);font-weight:normal; }
+h3 {font-size:em(30px);font-weight:normal; }
+h4 {font-size:em(22px);font-weight:normal; }
+h5 {font-size:em(21px);font-weight:normal; }
+h6 {font-size:em(18px);font-weight:normal; }
+
+cite {
+  font-style:normal;
+  font-weight:bold;
+  font-size:em(18px);
+}
+
+
+/* -----------------------------------
+  BODY CLASSES   
+------------------------------------ */
+.fixed_nav_padding {
+  padding-top:76px;
+}

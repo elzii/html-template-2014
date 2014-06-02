@@ -1,0 +1,33 @@
+/* style.scss */
+  
+// Dependencies
+@import "compass",
+        "lib/ffw";
+
+// Components & Libraries     
+@import "../components/normalize.css/normalize.css"; 
+@import "../components/animate.css/animate.min.css";
+@import "../components/font-awesome/css/font-awesome.min.css";
+
+// Config Vars
+@import "config";
+
+// Core
+@import "lib/body",
+        "lib/grid",
+        "lib/helpers",
+        "lib/fonts",
+        "lib/forms",
+        "lib/buttons";
+
+// Modules
+@import "modules/elements",
+        "modules/header",
+        "modules/hero",
+        "modules/sliders",
+        "modules/social",
+        "modules/content",
+        "modules/footer";
+
+// Pages
+@import "pages/home";

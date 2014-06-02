@@ -1,0 +1,120 @@
+// _header.scss
+
+/* --------------------------------
+   HEADER
+--------------------------------- */
+$height-header        : 76;
+$height-header_mobile : 60;
+
+#header {
+  width:100%;
+  height:76px;
+  line-height:76px;
+  *background:$colorPrimaryDarkest;
+  @include clearfix;
+  color:#fff;
+  font-size:em(15px);
+  @include background-image(linear-gradient(top, rgba(40,42,44,0.90) 0%,rgba(40,42,44,0.90) 100%));
+
+  
+  .container-full {
+    padding:0 30px;
+    height:100%;
+  }
+  
+  /* LOGO
+  ---------------------------------- */
+  .logo {
+    line-height:inherit;
+    height:100%;
+
+    @include media(mobile) { 
+      width:50%; 
+      text-align:center;
+      margin:0 auto;
+      float:none;
+    }
+
+    a {
+      display:block;
+      width:100%;
+      height:100%;
+      line-height:inherit;
+      background-image:url('../images/logo-header-small.png');
+      background-repeat:no-repeat;
+      background-size:auto auto;
+      background-position:0 50%;
+
+      @include media(mobile) { 
+        background-position:50% 50%;
+      }
+    }
+  }   
+  
+  /* NAVIGATION
+  ---------------------------------- */
+  .navigation {
+    text-align:right;
+    height:100%;
+    padding: 15px 0;
+
+  }
+
+
+    /* --------------------------------
+       MENU(S)
+    --------------------------------- */
+    ul {
+      @include ul-blank;
+      @include inline-block;
+
+      li {
+        line-height:1;
+        display:block;
+        float:left;
+
+        a {
+          @include inline-block;
+          padding:12px 18px;
+        }
+
+        &:hover a {color:$colorPrimary;}
+      }
+    }
+    // MENU AUTH
+    .menu-auth {
+      li {position:relative;}
+
+      li:last-child a {
+        background-color:$colorSecondary;
+        @include border-radius(4px);
+        color:#fff;
+        
+        &:hover {
+          background-color: darken($colorSecondaryDarker, 3); 
+          color:#fff;
+        }
+      }
+    }
+}
+
+
+/* --------------------------------
+   MOBILE-MENU-TOGGLE
+--------------------------------- */
+#mobile-menu-toggle {
+  display:none;
+
+  @include media(mobile) { 
+    display:block;
+    position:absolute;
+    left:0;top:0;
+    width:55px;
+    height:100%;
+    line-height:#{$height-header_mobile + 4}px;
+    font-size:em(24px);
+    text-align:center;
+    color:#fff;
+  }
+}
+

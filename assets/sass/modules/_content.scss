@@ -1,0 +1,42 @@
+// _content.scss
+
+
+
+/**
+ * Content
+ * The main content wrapper. Use classes to alter its top padding or other attributes.
+ */
+#content {
+  // color:#605d5b;
+  color:#5c5c5c;
+
+  &.page {}
+  &.quiz { 
+    padding:80px 0;
+    text-align:center;
+  }
+
+}
+
+/**
+ * Section
+ * Section defaults and common child elements
+ */
+section {
+
+}
+  .section {
+    margin:90px 0;
+  }
+  .section-header {
+    
+  }
+  .section-title {
+    margin-top:0;
+    margin-bottom:50px;
+  }
+  .section-footer {
+    margin-top: 30px;
+  }
+
+

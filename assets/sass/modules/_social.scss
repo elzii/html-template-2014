@@ -1,0 +1,27 @@
+// _social.scss
+
+/* -----------------------------------
+  MENU-SOCIAL
+----------------------------------- */
+.menu-social {
+  @include ul-blank;
+
+  li {
+    @include inline-block;
+    width:45px;
+    text-align:center;
+
+    a {
+      display:block;
+      width:100%;height:100%;
+      color:$colorSecondary;
+      font-size:em(26px);
+
+      &:hover { color:$colorSecondaryDark; }
+    }
+
+    &.twitter a {font-size:em(28px);}
+    &.facebook a {}
+    &.google-plus a {}
+  }
+}

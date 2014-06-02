@@ -1,0 +1,93 @@
+// _buttons.scss
+
+.btn {
+  position:relative;
+  @include inline-block;
+  padding:16px 25px 14px 25px;
+  line-height:1;
+  @include border-radius(4px);
+  @include background-clip(padding-box);
+  // @include clearfix;
+  /* TRANSITION */
+  @include transition(all 150ms);
+  cursor:pointer;
+
+  &.btn-large {
+    padding:25px 35px;
+    font-size:em(21px);
+  }
+
+  &.btn-padded {
+    padding:20px 32px 22px 32px;
+    font-size:em(15px);
+  }
+  
+  &.btn-icon {
+    .fa {
+      position:relative;
+      font-size:em(24px);
+      top:2px;
+    }
+
+    &.btn-icon-left  { i, .fa {padding-right:10px;} }
+    &.btn-icon-right { i, .fa {padding-left:10px;} }
+  }
+
+  &.btn-tab {
+    padding-right:120px; // 35px + 85px
+
+    &:before {
+      @include inline-block;
+      position:absolute;top:0;right:0;
+      width:85px;height:100%;
+      content:'WELLIST IS FREE!';
+      line-height:1.2;
+      font-size:12px;
+      color:#f28d95;
+      text-align:center;
+      padding:22px 15px;
+      background-color:$colorSecondaryDarkerAlt;
+      background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAABGCAYAAAAXdB7TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3NTUyRjFENkQ0MTUxMUUzOTI0M0Q5RkE3MUQ2Qjg4OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3NTUyRjFEN0Q0MTUxMUUzOTI0M0Q5RkE3MUQ2Qjg4OCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE0NUI2QUZGRDNEQjExRTM5MjQzRDlGQTcxRDZCODg4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkE0NUI2QjAwRDNEQjExRTM5MjQzRDlGQTcxRDZCODg4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+flpTzQAAAVJJREFUeNqc18uOgkAQQNEmmdWs5/+/cHwhKMprqirQoUk7XZdKeqHJCVGullYhhG85z1kmOKeS8yOnl/MQ1xOko1fqFjx70TrDAt8ErVe9CJwI0rl9eo3/obugF0WtoCdFeu9ail6C7hT1gm4UjYIuFGkYJ4p0TrmkSkirGCnKVlFC2SpKKFtFCWWrKKFsFSWUraKEslWUULaKEspW4UFXMQNF9f6byYMaQR1F+h34oKgT1FD0FlRTNAi6UjQJOlOk87u9v1503i4DL0qq8KKkCi9KqvCipAovSqrwoqQKL0qq8KKkCi9KqiAoLgOCYhUExWVAUFwGBMVlQFBcBgTFZUBQXAYExWVAUFwGFFkVFNlPBIqsCoqsCoqsCoqsCoqsCoqsCoqsiq/AprKBV7KP/RFUH0HNEdQeQa72pt3p9S0fd09uH8/LWf+I2Q+yPwEGANfBUL81S8RdAAAAAElFTkSuQmCC');
+      background-repeat:no-repeat;
+      background-position:0 0;
+      background-size:auto 100%;
+      @include border-radius(0 4px 4px 0);
+      @include background-clip(padding-box);
+      /* TRANSITION */
+      @include transition(color 250ms);
+    }
+
+    &:hover:before {
+      color:lighten(#f28d95, 5);
+    }
+  }
+
+  // COLORS
+  &.btn-primary {
+    background-color:$colorPrimary;
+    color:#fff;
+
+    &:hover {
+      background-color:darken($colorPrimary, 5);
+    }
+  }
+  &.btn-secondary {
+    background-color:$colorSecondary;
+    color:#fff;
+
+    i, .fa { color:#bd2633; }
+
+    &:hover {
+      background-color:darken(desaturate( $colorSecondary, 15), 5);
+    }
+  }
+  &.btn-white {
+    background-color:#fff;
+    color:#00aedf;
+    background-color: #fff;
+    @include box-shadow(0 0 0 5px #f2f1f1);
+    &:hover {
+      @include box-shadow(0 0 0 5px #00aedf);
+    }
+  }
+}

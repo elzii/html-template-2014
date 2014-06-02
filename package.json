@@ -1,0 +1,37 @@
+{
+  "name": "html-template",
+  "title": "html-template",
+  "description": "HTML Template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "bower install && bundle install"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "*",
+    "gulp": "*",
+    "gulp-util": "*",
+    "gulp-compass": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-minify-css": "*",
+    "gulp-jshint": "*",
+    "gulp-uglify": "*",
+    "gulp-imagemin": "*",
+    "gulp-rename": "*",
+    "gulp-clean": "*",
+    "gulp-concat": "*",
+    "gulp-plumber": "*",
+    "gulp-notify": "*",
+    "gulp-notify-growl": "*",
+    "gulp-cache": "*",
+    "gulp-file-include": "*",
+    "gulp-livereload": "*",
+    "gulp-connect": "*"
+  },
+  "keywords": []
+}

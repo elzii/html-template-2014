@@ -1,0 +1,48 @@
+// _home.scss
+
+
+/* -----------------------------------
+  SERVICES
+----------------------------------- */
+#services {
+
+  .services {padding:25px 0 15px 0;}
+
+}
+
+/* -----------------------------------
+  SEARCH-PERSON
+----------------------------------- */
+#search-person {
+  height:345px;width:100%;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  @include background-size(cover);
+  background-image:url('../images/content/bg-search-pers.jpg');
+  border-bottom:8px solid $colorSecondary;
+
+  form {margin-top:30px;}
+}
+
+/* -----------------------------------
+  SHARE-SIGNUP
+----------------------------------- */
+#share-signup {
+
+}
+  .share-site {
+    padding:0 25px 0 50px;
+
+    nav {
+      margin-top:35px;
+      height:45px;
+    }
+  }
+  .newsletter-signup {
+    padding:0 50px 0 25px;
+
+    form {
+      margin-top:35px;
+      height:45px;
+    }
+  }

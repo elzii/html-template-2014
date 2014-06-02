@@ -1,0 +1,30 @@
+// _footer.scss
+
+#footer {
+  text-align:center;
+}
+
+  .menu-footer {
+    @include inline-block;
+    width:100%;height:auto;
+    color:$colorSecondary;
+    font-family:$default-alt;
+    font-weight:500;
+    font-size:em(18px);
+
+    li {
+      @include inline-block;
+      
+      a {
+        display:block;
+        width:100%;height:100%;
+        padding:0 25px;
+      }
+    }
+  }
+
+  .copyright {
+    margin-top:20px;
+    font-size:em(12px);
+    color:#c8c8c8;
+  }

@@ -1,0 +1,338 @@
+// _forms.scss
+
+$height-input_small    : 68;
+$height-input_medium   : 68;
+$height-input_large    : 80;
+
+$input-active_color    : #f15966;
+
+/* -----------------------------------
+  INPUTS (TEXT)
+----------------------------------- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"], {
+  @include border-radius(4px);
+  @include background-clip(padding-box);
+  background-color: #fff;
+  padding:10px 0;
+  font-family:$default;
+}
+  input, select {
+    outline:0;border:0;
+
+    &:active {outline:0;border:0;}
+    &:focus {outline:0;border:0;}
+  }
+
+  .input-field {
+    position:relative;
+    @include transition(all 150ms);
+  }
+
+  // INPUT-MEDIUM
+  .input-medium {
+    height:#{$height-input_medium}px;
+    
+    &:before { 
+      line-height:#{$height-input_medium}px;
+      height:#{$height-input_medium}px;
+    }
+    input {
+      height:100%;
+      padding:20px 25px;
+      font-size:em(18px);
+    }
+  }
+
+  // INPUT-FULL
+  .input-full {
+    width:100%;
+
+    input {width:100%;}
+  }
+
+  // INPUT-LARGE
+  .input-large {
+    height:#{$height-input_large}px;
+    margin-bottom:15px;
+    
+    &:before { 
+      line-height:#{$height-input_large - 5}px;
+      height:100%;
+    }
+    input {
+      height:100%;
+      width:100%;
+      padding:20px 25px;
+      font-size:em(18px);
+    }
+  }
+  
+  // INPUT-SELECT
+  .input-select {
+    
+    &:after {
+      position:absolute;
+      font-family:"FontAwesome";
+      content:'\f107';
+      font-size:24px;
+      z-index:-1;
+      top:0;
+      right:0;
+      width:70px;
+      height:100%;
+      line-height:76px;
+      border-left:1px solid #bebebe;
+
+    }
+
+    select {
+      @include appearance(none);
+      width:100%;height:100%;
+      background-color:transparent;
+    }
+
+  }
+  // INPUT-BORDERED
+  .input-bordered {
+    border:4px solid #bebebe;
+    @include border-radius(10px);
+    @include background-clip(padding-box);
+    
+    &.active {
+      color:$input-active_color !important;
+      border:4px solid $input-active_color;
+
+      input, &:after {border-color:$input-active_color;}
+
+      &:before { color:$input-active_color !important; }
+    }
+  }
+
+  // INPUT ICON
+  .input-icon {
+
+    input, select {padding-left:60px;}
+    
+    &:before {
+      position:absolute;top:0;left:0;
+      text-align:center;
+      width:60px;
+      color:#c4c4c4;
+      z-index:10;
+      font-size:em(20px);
+      /* TRANSITION */
+      @include transition(color 150ms);
+    }
+    
+    &.active:before { color:#4b4b4b; }
+  }
+  
+  // INPUT DIVIER
+  .input-divider-horizontal {
+    @include inline-block;
+    font-size:em(22px);
+    line-height:inherit;
+    // line-height:#{$height-input_medium}px;
+    width:50px;
+    text-align:center;
+  }
+
+
+  // INPUT-INLINE
+  .input-inline-wrap {
+    width:100%;
+    height:auto;
+    @include clearfix;
+    margin:0 auto;
+
+    &.small   {width:280px;height:45px;max-height:45px;}
+    &.medium  {width:350px;height:45px;max-height:45px;}
+    &.large   {width:420px;height:45px;max-height:45px;}
+
+    .input-inline-text {
+      width:82%;height:100%;
+      float:left;
+
+      input {
+        background-color:#ebebeb;
+        width:100%;height:100%;
+        border:0;
+        outline:0;
+        padding:10px 15px;
+      }
+    }
+    .input-inline-submit {
+      float:right;
+      position:relative;
+      width:18%;height:100%;
+      background-color:$colorSecondary;
+      @include border-radius(0 3px 3px 0);
+      /* TRANSITION */
+      @include transition(all 150ms);
+
+      &:before, .fa {
+        position:absolute;top:0;left:0;
+        width:100%;height:100%;
+        text-align:center;
+        padding:15px;
+        color:#fff;
+        @include transition()
+      }
+
+      &:hover {
+        background-color:$colorSecondaryDarker;
+      }
+
+      input {
+        display:block;
+        width:100%;height:100%;
+        border:0;
+        outline:0;
+        background-color:transparent;
+      }
+    }
+  }
+
+  // INPUT-DOUBLE
+  .input-double {
+    width:100%;
+    @include clearfix;
+
+      .input-double-left {
+        width:35%;
+        float:left;
+      }
+
+      .input-double-right {
+        width:65%;
+        float:left;
+        border-left:1px solid #bebebe;
+        @include border-radius(0 10px 10px 0);
+        padding-left:20px;
+      }
+  }
+
+/* -----------------------------------
+  FIELDSET(S) AND FANCY INPUTS   
+------------------------------------ */
+fieldset {
+  border:none;
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  
+  &.fieldset-medium {
+    margin:0 auto 40px auto;
+  }
+  &.fieldset-large {
+    margin:0 auto 80px auto;
+  }
+  &.fieldset-narrow {
+    width:55%;
+  }
+}
+  .fieldset-spacer {
+    width:100%;
+    height:50px;
+  }
+  .fieldset-header {
+    margin-bottom:20px;
+  }
+  .fieldset-title {
+    margin:0;
+    padding:0;
+  }
+  .fieldset-title + .fieldset-subtitle {
+    
+  }
+  .fieldset-subtitle {
+    @include inline-block;
+    margin:0;
+    padding:0;
+    text-transform:uppercase;
+    color:#b9b9b9;
+    font-size:em(13px);
+  }
+ 
+/* -----------------------------------
+  FANCY RADIO
+------------------------------------ */
+.radio-buttons {
+
+  &.radio-buttons-small {
+    label {
+      width:40%;
+      float:left;
+      margin:0;
+    }
+  }
+
+  input[type='radio'] {
+    display:none;  
+  }
+   
+  label {
+    cursor:pointer;
+    @include inline-block;
+    position:relative;
+    margin-right:10px;
+    height: 80px;
+    line-height: 78px;
+    width:266px;
+    @include border-radius(10px);
+    @include background-clip(padding-box);
+    border:4px solid #bebebe;
+    font-size:em(16px);
+    font-family:$default;
+    font-weight:500;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    /* TRANSITION */
+    @include transition(all 150ms);
+    
+    &:before {
+      position:absolute;
+      display:block;
+      font-family:"FontAwesome";
+      color:$input-active_color;
+      font-size:em(32px);
+      content:'\f058';
+      line-height:1;
+      left:50%;
+      width:40px;
+      height:30px;
+      margin-left:-20px;
+      background-color:#ffffff;
+      /* TRANSITION */
+      @include transition(all 150ms);
+      @include opacity(0);
+      top:-50px;
+    }
+  }
+
+  input[type='radio']:checked + label {
+    border:4px solid $input-active_color;
+    color: $input-active_color;
+    
+    &:before {
+      @include opacity(1);
+      top:-18px;
+    }
+  }
+}
+
+.radio-button-divider {
+  @include inline-block;
+  font-size:em(22px);
+  line-height:inherit;
+  // line-height:#{$height-input_medium}px;
+  width:20%;
+  line-height:#{$height-input_large}px;
+  text-align:center;
+  float:left;
+}
+

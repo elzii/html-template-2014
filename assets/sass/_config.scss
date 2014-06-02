@@ -1,0 +1,57 @@
+/* _config.scss */
+
+
+/* COLORS                           | **REQUIRED**
+================================================== */
+
+// BLUES
+$colorPrimary:              #3eaecc;
+$colorPrimaryDark:          #157eaa;
+$colorPrimaryDarker:        #0d6a96;
+$colorPrimaryDarkerAlt:     #0080bf;
+$colorPrimaryDarkest:       #282a2c;
+$colorPrimaryLight:         #d5e3e7;
+
+// REDISH PINK
+$colorSecondary:            #f15966;
+$colorSecondaryDark:        #f28d95;
+$colorSecondaryDarker:      #d94f5b;
+$colorSecondaryDarkerAlt:   #d9505c;
+$colorSecondaryLight:       #f28d95;
+
+// GRAYS
+// $colorTertiary:         #dddddd;
+// $colorTertiaryDark:     #cccccc;
+// $colorTertiaryLight:    #fcfcfa;
+// $colorTertiaryLighter:  #faf9f5;
+
+
+
+
+/* GRID SETTINGS                    | **REQUIRED**
+================================================== */
+$widescreen             : 1140;
+$desktop                : 960;
+$tablet                 : 768;
+$mobile-landscape       : 480;
+$mobile-portrait        : 320;
+$mobile                 : $mobile-landscape;
+
+$columns                : 12;
+$margin                 : 10px;
+$padding                : 10px;
+
+$responsive             : true;
+$from-direction         : left;
+
+
+
+$experimental-support-for-svg: true;
+
+
+/* FONTS                            | **REQUIRED**
+================================================== */
+$default      :  "Helveica Neue", Helvetica, Arial, sans-serif;
+$default-alt  :  Arial, sans-serif;
+$serif        :  Georgia, serif;
+$fa           :  "fontawesome";

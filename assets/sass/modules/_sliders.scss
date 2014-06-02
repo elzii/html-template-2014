@@ -1,0 +1,48 @@
+// _sliders.scss
+
+/* --------------------------------
+   FLEXSLIDER
+--------------------------------- */
+.flexslider {
+
+  ul.slides {
+    width: 100%;height: 100%;
+    margin: 0;padding: 0;
+    list-style-type: none;
+    @include border-radius(0 0 10px 10px);
+
+    li {
+      display:none;
+      height: 100%;
+      @include border-radius(0 0 10px 10px);
+      /* TRANSITION */
+      @include transition(all 200ms);
+      visibility: hidden;
+      @include opacity(0);
+
+      &.show {
+        visibility: visible;
+        @include opacity(1);        
+      }
+    }
+  }
+
+    .slide-inner {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      @include background-size(cover);
+      width: 100%;
+      height: 100%;
+      @include border-radius(0 0 10px 10px);
+    }
+
+  .flex-viewport {
+    width:100%;height:100%;
+    @include border-radius(0 0 10px 10px);
+  }
+
+  .flex-control-nav {
+    list-style-type:none;
+  }
+}
+

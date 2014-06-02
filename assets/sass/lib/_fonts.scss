@@ -1,0 +1,38 @@
+/* _fonts.scss */
+
+@mixin fff($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    src: url('#{$file-path}.eot?') format('eot'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+  }
+}
+
+
+// Font Awesome
+@include fff(proximanova, '../../app/fonts/proximanova/proximanova-regular-webfont', normal);
+@include fff(proximanova, '../../app/fonts/proximanova/proximanova-light-webfont', 300);
+@include fff(proximanova, '../../app/fonts/proximanova/proximanova-semi-webfont', 600);
+@include fff(proximanova, '../../app/fonts/proximanova/proximanova-bold-webfont', bold);
+
+// Avenir
+// @include fff(avenir, '../../app/fonts/avenir/avenir-book', normal);
+// @include fff(avenir, '../../app/fonts/avenir/avenir-light', 300);
+@include fff(avenir, '../../app/fonts/avenir/avenir-medium', 500);
+
+
+/* Chrome v33 "invisible text" fix
+================================================== */
+body {
+-webkit-animation-duration: 0.1s;
+-webkit-animation-name: fontfix;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-timing-function: linear;
+-webkit-animation-delay: 0.1s;
+}
+
+@-webkit-keyframes fontfix {
+  from { opacity: 1; }
+  to { opacity: 1; }
+}
